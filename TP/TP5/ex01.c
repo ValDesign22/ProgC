@@ -10,7 +10,13 @@
  */
 int Lecture(char *ch, int NbCarMax)
 {
-  return scanf("%s", ch);
+    int i = 0;
+    char c;
+    while ((c = getchar()) != '\n' && i < NbCarMax - 1) {
+        ch[i++] = c;
+    }
+    ch[i] = '\0';
+    return i;
 }
 
 /* Longueur d'une chaine de caracteres
